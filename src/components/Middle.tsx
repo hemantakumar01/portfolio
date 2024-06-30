@@ -31,7 +31,7 @@ const Middle = (props: Props) => {
         </AnimateLayout>
         <AnimateLayout>
           <p>
-            I`ve been coding professionally for 3 years now and currently
+            I&apos;ve been coding professionally for 3 years now and currently
             working as a Software Engineer that focuses on architecture,{" "}
             <strong className="text-[#E25170]">APIs, nitty-gritty</strong>{" "}
             business logics and even front end integration stuff now, how time
@@ -54,7 +54,7 @@ const Middle = (props: Props) => {
                 </span>
               </div>
               <div className="flex items-center gap-2">
-                <SiJavascript size={size} className="text-primary  " />
+                <SiJavascript size={size} className="text-primary" />
                 <span className="dark:text-white font-normal text-sm md:text-base text-nowrap text-ellipsis overflow-hidden">
                   Javascript (ES6+)
                 </span>
@@ -161,7 +161,7 @@ const Middle = (props: Props) => {
                     </span>
                   </p>
                   <p>
-                    I've successfully delivered a range of projects, from
+                    I&apos;ve successfully delivered a range of projects, from
                     dynamic web applications to sophisticated user interfaces.
                     <span className="text-primary">
                       Each project honed my technical skills and creative
@@ -191,7 +191,7 @@ const Middle = (props: Props) => {
                   <span className="text-primary">
                     MERN stack, Next.js, shadcnUI, MUI, and Framer Motion
                   </span>
-                  . I've completed diverse projects,
+                  . I&apos;ve completed diverse projects,
                 </p>
                 <p>
                   ranging from simple websites to complex applications. Each
@@ -318,7 +318,7 @@ const Middle = (props: Props) => {
                   <hr className="border-gray-400 mt-1" />
                 </div>
                 <p className="font-normal">
-                  Only-men is an e-commerce site for men's wear, built from
+                  Only-men is an e-commerce site for men&apos;s wear, built from
                   scratch with Next.js, Tailwind, NextAuth for authentication,
                   Razorpay for payments, and Shadcn for UI. It includes a
                   dashboard featuring charts using Recharts.
