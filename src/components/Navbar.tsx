@@ -8,7 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { useEffect, useState } from "react";
-import MobileMenu from "./MobileMenu";
+import MobileMenu, { menu } from "./MobileMenu";
 type Props = {};
 
 const Navbar = (props: Props) => {
@@ -61,10 +61,11 @@ const Navbar = (props: Props) => {
       </div>
       <div className=" items-center gap-5 hidden md:flex ">
         <div className="flex items-center gap-4 text-xl">
-          <Link href={"/"}>About</Link>
-          <Link href={"/"}>Contact</Link>
-          <Link href={"/"}>Projects</Link>
-          <Link href={"/"}>Portfolio</Link>
+          {menu.map((i, idx) => (
+            <Link href={i.url} className="hover:text-primary" key={idx}>
+              {i.title}
+            </Link>
+          ))}
         </div>
         <Button variant="outline" size="icon">
           <Sun

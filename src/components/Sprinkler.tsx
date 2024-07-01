@@ -11,9 +11,9 @@ export function SparklesPreview(props: Props) {
           background="transparent"
           minSize={0.6}
           maxSize={1.4}
-          particleDensity={100}
+          particleDensity={150}
           className="w-full h-full"
-          particleColor="#b43030"
+          particleColor="#30b439"
         />
       </div>
     </div>

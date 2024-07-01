@@ -1,36 +1,84 @@
 "use client";
-import React from "react";
 import {
   Drawer,
   DrawerClose,
   DrawerContent,
-  DrawerDescription,
-  DrawerFooter,
   DrawerHeader,
-  DrawerTitle,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { Button } from "./ui/button";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
+import Link from "next/link";
+import React from "react";
+import { BiSolidContact } from "react-icons/bi";
+import { FaPersonBreastfeeding } from "react-icons/fa6";
+import { GrProjects } from "react-icons/gr";
+import { IoHome, IoPersonSharp } from "react-icons/io5";
+import { MdClose, MdOutlineSportsSoccer } from "react-icons/md";
 
 type Props = {
   children: React.ReactElement;
 };
-
+export const menu = [
+  {
+    title: "Home",
+    icon: <IoHome className="text-primary" />,
+    url: "/",
+  },
+  {
+    title: "About",
+    icon: <IoPersonSharp className="text-primary" />,
+    url: "/about",
+  },
+  {
+    title: "Hire",
+    icon: <FaPersonBreastfeeding className="text-primary" />,
+    url: "/hire",
+  },
+  {
+    title: "Projects",
+    icon: <GrProjects className="text-primary" />,
+    url: "/projects",
+  },
+  {
+    title: "Contact",
+    icon: <BiSolidContact className="text-primary" />,
+    url: "/contact",
+  },
+  {
+    title: "Portfolio",
+    icon: <MdOutlineSportsSoccer className="text-primary" />,
+    url: "/portfolio",
+  },
+];
 const MobileMenu = (props: Props) => {
   return (
-    <Drawer>
+    <Drawer direction="right">
       <DrawerTrigger>{props.children}</DrawerTrigger>
-      <DrawerContent>
-        <DrawerHeader>
-          <DrawerTitle>Are you absolutely sure?</DrawerTitle>
-          <DrawerDescription>This action cannot be undone.</DrawerDescription>
-        </DrawerHeader>
-        <DrawerFooter>
-          <Button>Submit</Button>
-          <DrawerClose>
-            <Button variant="outline">Cancel</Button>
-          </DrawerClose>
-        </DrawerFooter>
+      <DrawerContent className=" top-0 right-0 left-auto mt-0 w-[250px] rounded-none ">
+        <DrawerHeader className="text-xl">Menu</DrawerHeader>
+        <DrawerClose className=" absolute  top-2">
+          <MdClose className="text-primary  text-2xl rounded" />
+        </DrawerClose>
+        <div className="grid grid-cols-2 p-2 gap-3">
+          {menu.map((item, idx) => (
+            <Link
+              href={item.url}
+              className="border rounded-sm flex items-center text-lg justify-center gap-2 p-1"
+              key={idx}
+            >
+              <DrawerClose className="flex items-center justify-center gap-1 py-2">
+                {item.icon} {item.title}
+              </DrawerClose>
+            </Link>
+          ))}
+        </div>
+        <div className="icons flex items-center gap-3 py-4 px-2 justify-center ">
+          <Twitter className="hover:text-primary cursor-pointer" />
+          <Instagram className="hover:text-primary cursor-pointer" />
+          <Facebook className="hover:text-primary cursor-pointer" />
+          <Youtube className="hover:text-primary cursor-pointer" />
+          <Linkedin className="hover:text-primary cursor-pointer" />
+        </div>
       </DrawerContent>
     </Drawer>
   );

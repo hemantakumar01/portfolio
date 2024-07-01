@@ -1,13 +1,10 @@
 "use client";
-import React, { useEffect, useRef } from "react";
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import Image from "next/image";
-import { AiFillCopyrightCircle } from "react-icons/ai";
+import Link from "next/link";
 import { FaHandSparkles } from "react-icons/fa6";
-import { GrGithub } from "react-icons/gr";
 import { ImNewTab } from "react-icons/im";
-import { IoMdHeart } from "react-icons/io";
 import {
   SiDocker,
   SiGraphql,
@@ -18,7 +15,6 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import AnimateLayout from "./AnimateLayout";
-import Link from "next/link";
 
 type Props = {};
 const size = 25;
@@ -388,17 +384,6 @@ const Middle = (props: Props) => {
               or even weeb stuff, anything is cool. So feel free to message me
               on any of my social media or shoot me an{" "}
               <span className="text-primary">email</span>.
-            </p>
-          </div>
-        </AnimateLayout>
-        <AnimateLayout>
-          <div className="footer flex py-4 md:py-0 items-center justify-center flex-col font-normal">
-            <GrGithub size={25} className="text-primary" />
-            <p className="flex items-center gap-1 text-sm">
-              Designed and Made with <IoMdHeart />
-            </p>
-            <p className="flex items-center gap-1 text-sm">
-              Hemanta paswan <AiFillCopyrightCircle /> 2024
             </p>
           </div>
         </AnimateLayout>
