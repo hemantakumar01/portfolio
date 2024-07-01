@@ -36,8 +36,8 @@ const Left = (props: Props) => {
           Ohh you found me?. Howdy! I am
         </motion.span>
         <motion.div variants={item} className="">
-          <h1 className="text-4xl font-[700]">A FULLSTACK </h1>
-          <motion.h1 className="text-7xl font-[800] text-primary">
+          <h1 className="md:text-4xl text-2xl font-[700]">A FULLSTACK </h1>
+          <motion.h1 className="text-3xl md:text-7xl font-[800] text-primary">
             DEVELOPER.
           </motion.h1>
           <span className="text-sm md:text-base">

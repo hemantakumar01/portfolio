@@ -21,32 +21,32 @@ type Props = {
 export const menu = [
   {
     title: "Home",
-    icon: <IoHome className="text-primary" />,
+    icon: <IoHome className="text-primary text-lg" />,
     url: "/",
   },
   {
     title: "About",
-    icon: <IoPersonSharp className="text-primary" />,
+    icon: <IoPersonSharp className="text-primary text-lg" />,
     url: "/about",
   },
   {
     title: "Hire",
-    icon: <FaPersonBreastfeeding className="text-primary" />,
+    icon: <FaPersonBreastfeeding className="text-primary text-lg" />,
     url: "/hire",
   },
   {
     title: "Projects",
-    icon: <GrProjects className="text-primary" />,
+    icon: <GrProjects className="text-primary text-lg" />,
     url: "/projects",
   },
   {
     title: "Contact",
-    icon: <BiSolidContact className="text-primary" />,
+    icon: <BiSolidContact className="text-primary text-lg" />,
     url: "/contact",
   },
   {
     title: "Portfolio",
-    icon: <MdOutlineSportsSoccer className="text-primary" />,
+    icon: <MdOutlineSportsSoccer className="text-primary text-lg" />,
     url: "/portfolio",
   },
 ];
@@ -63,7 +63,7 @@ const MobileMenu = (props: Props) => {
           {menu.map((item, idx) => (
             <Link
               href={item.url}
-              className="border rounded-sm flex items-center text-lg justify-center gap-2 p-1"
+              className="border rounded-sm flex items-center text-base justify-center gap-2 p-1"
               key={idx}
             >
               <DrawerClose className="flex items-center justify-center gap-1 py-2">

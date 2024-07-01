@@ -3,17 +3,19 @@
 import { useTheme } from "next-themes";
 
 import { Button } from "@/components/ui/button";
+import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { AlignRight, MoonStar, Sun } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, useMotionValueEvent, useScroll } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import MobileMenu, { menu } from "./MobileMenu";
+import { useRouter } from "next/navigation";
 type Props = {};
 
 const Navbar = (props: Props) => {
   const [show, setShow] = useState<boolean>(false);
   const { scrollY } = useScroll();
+  const navigate = useRouter();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const prev: any = scrollY.getPrevious();
@@ -43,6 +45,7 @@ const Navbar = (props: Props) => {
         height={100}
         alt="logo"
         className="w-[50px]"
+        onClick={() => navigate.push("/")}
       />
       <div className="mobile flex items-center gap-3 md:hidden">
         <Button variant="outline" size="icon">

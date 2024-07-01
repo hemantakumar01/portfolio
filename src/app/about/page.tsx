@@ -1,10 +1,13 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 type Props = {};
 
 const Page = (props: Props) => {
+  const navigate = useRouter();
+
   return (
     <div className="">
       <div className="flex flex-col-reverse md:flex-row md:p-10 gap-3 pb-10 md:pb-0">
@@ -19,7 +22,11 @@ const Page = (props: Props) => {
             I deliver sleek, efficient, and user-friendly web applications
             tailored to your unique needs.
           </p>
-          <Button className="" size={"lg"}>
+          <Button
+            className=""
+            size={"lg"}
+            onClick={() => navigate.push("/hire")}
+          >
             Hire me
           </Button>
         </div>
