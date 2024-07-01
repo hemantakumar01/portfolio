@@ -44,7 +44,7 @@ const Navbar = (props: Props) => {
         width={100}
         height={100}
         alt="logo"
-        className="w-[50px]"
+        className="w-[50px] cursor-pointer"
         onClick={() => navigate.push("/")}
       />
       <div className="mobile flex items-center gap-3 md:hidden">

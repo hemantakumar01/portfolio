@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { Facebook, Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 import { Button } from "./ui/button";
+import { useRouter } from "next/navigation";
 type Props = {};
 const item = {
   show: {
@@ -21,6 +22,7 @@ const variants = {
   },
 };
 const Left = (props: Props) => {
+  const route = useRouter();
   return (
     <div className="left xl:fixed  flex-1 w-full  max-w-[600px]  xl:bg-primary xl:pr-1 clip-circle">
       <motion.div
@@ -57,6 +59,7 @@ const Left = (props: Props) => {
           <Button
             variant={"outline"}
             className="border-primary hover:scale-110 transition-all duration-100 rounded-none font-thin"
+            onClick={() => route.push("/contact")}
           >
             Get in Touch
           </Button>
