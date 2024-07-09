@@ -35,19 +35,14 @@ export const menu = [
     url: "/hire",
   },
   {
-    title: "Projects",
+    title: "Pricing",
     icon: <GrProjects className="text-primary text-lg" />,
-    url: "/projects",
+    url: "/pricing",
   },
   {
     title: "Contact",
     icon: <BiSolidContact className="text-primary text-lg" />,
     url: "/contact",
-  },
-  {
-    title: "Portfolio",
-    icon: <MdOutlineSportsSoccer className="text-primary text-lg" />,
-    url: "/portfolio",
   },
 ];
 const MobileMenu = (props: Props) => {
@@ -66,7 +61,7 @@ const MobileMenu = (props: Props) => {
               className="border rounded-sm flex items-center text-base justify-center gap-2 p-1"
               key={idx}
             >
-              <DrawerClose className="flex items-center justify-center gap-1 py-2">
+              <DrawerClose className="flex items-center justify-center flex-col gap-1 py-2">
                 {item.icon} {item.title}
               </DrawerClose>
             </Link>

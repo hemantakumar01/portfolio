@@ -3,7 +3,7 @@ import Left from "@/components/Left";
 import Middle from "@/components/Middle";
 import Image from "next/image";
 
-export default function Home() {
+export default async function Home() {
   return (
     <main className="flex flex-wrap xl:flex-nowrap px-1">
       <div className="w-full max-w-[600px]    ">

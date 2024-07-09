@@ -226,7 +226,7 @@ const Middle = (props: Props) => {
                 alt=""
                 width={300}
                 height={200}
-                className="rounded-t-xl md:rounded-t-none object-contain w-full h-full"
+                className="rounded-t-xl md:rounded-t-none object-cover w-full h-full xl:w-[380px] xl:h-[240px]"
               />
               <div className="p-4 space-y-4">
                 <div>
@@ -266,7 +266,7 @@ const Middle = (props: Props) => {
                 alt=""
                 width={300}
                 height={200}
-                className="rounded-t-xl md:rounded-t-none object-contain w-full h-full"
+                className="rounded-t-xl md:rounded-t-none object-cover w-full h-full xl:w-[380px] xl:h-[240px]"
               />
               <div className="p-4 space-y-4">
                 <div>
@@ -304,7 +304,7 @@ const Middle = (props: Props) => {
                 alt=""
                 width={300}
                 height={200}
-                className="rounded-t-xl md:rounded-t-none object-contain w-full h-full"
+                className="rounded-t-xl md:rounded-t-none object-cover w-full h-full xl:w-[380px] xl:h-[240px]"
               />
               <div className="p-4 space-y-4">
                 <div>

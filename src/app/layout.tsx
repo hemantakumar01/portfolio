@@ -6,7 +6,7 @@ import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
-
+import { Toaster } from "react-hot-toast";
 const roboto = Roboto({
   weight: ["400", "500", "900", "700"],
   subsets: ["latin"],
@@ -34,6 +34,7 @@ export default function RootLayout({
           <Navbar />
           <ScrollProgressBar />
           <SparklesPreview />
+          <Toaster position="top-center" />
           {children}
           <Footer />
         </ThemeProvider>

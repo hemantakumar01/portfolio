@@ -1,11 +1,9 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-
 type Props = {};
 
-const Page = (props: Props) => {
+const Page = async (props: Props) => {
   return (
     <div className="mx-auto max-w-[1200px] space-y-4">
       <div className="work-cards  dark:bg-[#242524] border rounded-lg   ">
