@@ -33,10 +33,7 @@ const ContactForm = (props: Props) => {
         toast.error("Please Provide all Fields");
         return;
       } else {
-        const { data } = await axios.post(
-          `https://ravidentist.site/api/sendMail`,
-          state
-        );
+        const { data } = await axios.post(`/api/sendMail`, state);
         console.log(data);
         toast.success("Message Send Successfully");
       }
